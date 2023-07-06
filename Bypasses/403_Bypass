@@ -1,0 +1,7 @@
+###1###
+Some application frameworks support various non-standard HTTP headers that can be used to override the URL in the original request:
+Keep the GET request to "/" and then add /admin in the following headers to bypass the restricted access
+X-Original-URL: /admin
+X-Rewrite-URL: /admin
+
+###2###
