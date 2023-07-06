@@ -28,3 +28,9 @@ X-Originating-IP
 X-Remote-Addr
 X-Client-IP
 X-Real-IP
+
+###4###
+Adding full endpoint in the URL like: 
+
+- https://vulnerable.com/config/ → 403 Forbidden
+- https://vulnerable.com/config/properties.json
