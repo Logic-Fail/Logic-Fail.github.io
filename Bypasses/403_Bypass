@@ -1,27 +1,18 @@
-Sometimes changing the request method from GET to POST can also lead to a bypass do check that in advance. Now let's continue
-
 ###TOOLS###
 
 bypass-403.sh https://github.com/iamj0ker/bypass-403
 403bypasser.py https://github.com/yunemse48/403bypasser
 
-###1###
+### 1 ###
+Changing methods from GET to POST 
+Changing the HTTP version from 2 to 1.1 or 1.0
+
+### 2 ###
 
 Some application frameworks support various non-standard HTTP headers that can be used to override the URL in the original request:
 Keep the GET request to "/" and then add /admin in the following headers to bypass the restricted access
 X-Original-URL: /admin
 X-Rewrite-URL: /admin
-
-###2###
-
-Adding characters in the URL path like:
-/*
-/%2f/
-/./
-/
-/*/
-
-###3###
 
 Adding different headers in requests with the value 127.0.0.1 or localhost or 127.1 can also help in bypassing restrictions.
 X-Custom-IP-Authorization
@@ -33,7 +24,38 @@ X-Remote-Addr
 X-Client-IP
 X-Real-IP
 
-###4###
-Adding full endpoint in the URL like: 
+### 3 ###
+
+Adding Strings Terminator or characters in the URL path like:
+String terminator: %00, 0x00, //, ;, %, !, ?, [] etc.
+/*
+/%2f/
+/./
+/
+/*/
+
+### 4 ###
+
+Path fuzzing/force browsing: Adding full endpoint in the URL like: 
 - https://vulnerable.com/config/ → 403 Forbidden
 - https://vulnerable.com/config/properties.json
+- https://website.com/admin/index.html
+- https://website.com/admin/./index.html
+
+### 5 ###
+
+Case Switching
+- https://website.com/admin -> 403 Forbidden
+- https://website.com/Admin -> 200 OK
+- https://website.com/aDmin -> 200 OK
+
+### 6 ###
+
+This is an Unusual one
+There might be a case when clearing all the header values, the server reacts to Host.
+- Change the HTTP protocol version to 1.0.
+And don't set any value in the header.
+- Removing Host in the header 
+(if the server and any other security mechanism are not configured in the right way. It puts the destination address itself in the header, and this makes us known as local user/ localhost.)
+The above steps will help to bypass the 403. For reference read the article: https://medium.com/bugbountywriteup/403-bypass-lyncdiscover-microsoft-com-db2778458c33
+
