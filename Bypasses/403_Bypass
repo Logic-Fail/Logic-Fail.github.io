@@ -1,17 +1,20 @@
-Sometime changing the request method from GET to POST can also lead to bypass do check that in advance. Now let's continue
+Sometimes changing the request method from GET to POST can also lead to a bypass do check that in advance. Now let's continue
 
 ###TOOLS###
+
 bypass-403.sh https://github.com/iamj0ker/bypass-403
 403bypasser.py https://github.com/yunemse48/403bypasser
 
 ###1###
+
 Some application frameworks support various non-standard HTTP headers that can be used to override the URL in the original request:
 Keep the GET request to "/" and then add /admin in the following headers to bypass the restricted access
 X-Original-URL: /admin
 X-Rewrite-URL: /admin
 
 ###2###
-Adding characters in URL path like:
+
+Adding characters in the URL path like:
 /*
 /%2f/
 /./
@@ -19,7 +22,8 @@ Adding characters in URL path like:
 /*/
 
 ###3###
-By adding different headers in requests with the value 127.0.0.1 or localhost or 127.1 can also help in bypassing restrictions.
+
+Adding different headers in requests with the value 127.0.0.1 or localhost or 127.1 can also help in bypassing restrictions.
 X-Custom-IP-Authorization
 X-Forwarded-For
 X-Forward-For
@@ -31,6 +35,5 @@ X-Real-IP
 
 ###4###
 Adding full endpoint in the URL like: 
-
 - https://vulnerable.com/config/ → 403 Forbidden
 - https://vulnerable.com/config/properties.json
