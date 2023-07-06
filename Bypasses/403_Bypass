@@ -1,7 +1,9 @@
-###TOOLS###
+Note: Try combining the attacks to bypass 403
 
-bypass-403.sh https://github.com/iamj0ker/bypass-403
-403bypasser.py https://github.com/yunemse48/403bypasser
+### TOOLS ###
+
+bypass-403.sh ---> https://github.com/iamj0ker/bypass-403
+403bypasser.py ---> https://github.com/yunemse48/403bypasser
 
 ### 1 ###
 Changing methods from GET to POST 
@@ -12,7 +14,7 @@ Changing the HTTP version from 2 to 1.1 or 1.0
 Some application frameworks support various non-standard HTTP headers that can be used to override the URL in the original request:
 Keep the GET request to "/" and then add /admin in the following headers to bypass the restricted access
 X-Original-URL: /admin
-X-Rewrite-URL: /admin
+X-Rewrite-URL: /admin/login
 
 Adding different headers in requests with the value 127.0.0.1 or localhost or 127.1 can also help in bypassing restrictions.
 X-Custom-IP-Authorization
