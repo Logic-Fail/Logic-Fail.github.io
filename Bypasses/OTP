@@ -8,6 +8,7 @@ There might be a case where:
 # They might even send the entered otp and correct otp in the request as a hash 
 # Very important to closely observe the response they tend to reveal the opt
 # Manipulation of response is a very common method that does look or sign like otp: false, otp: 1, status: false, etc
+For reference: https://infosecwriteups.com/behind-the-scenes-discovering-an-otp-leakage-bug-in-a-leading-broadband-services-website-480e0440394e
 
 ### 2 ###
 Brute-Forcing
@@ -16,3 +17,4 @@ Brute-Forcing
 ### 3 ###
 Observe the pattern
 -Sometimes there might be a pattern in how the otp is generated thus figuring out that can narrow down the payloads for brute-forcing attack or even helps us to guess the OTP
+For reference: https://medium.com/@itachiuchiha11/from-login-panels-to-victory-the-story-of-my-first-account-takeover-fd8ed6874478
