@@ -1,0 +1,36 @@
+Note: Below are some of the common methods used for bypassing the authentication as every application and server works differently so closely observe headers, pattern, 
+irregularity or any out-of-the-place things, and analyze how the application/server reacts to the requests, devise the plan accordingly to alter the request to bypass 
+the authentication.
+
+### 1 ###
+Cookie Tampering : Decode the cookie and change it's parameter like id: admin, admin: true etc.
+
+### 2 ###
+Response Manipulation (Move through KISS) : 
+
+### 3 ###
+username enumeration and brute-forcing: Check if there is a rate limit first otherwise, there is a risk of running into account lockout or block
+
+### 4 ###
+Forced browsing the contents of admin with low privilege user or with unauthenticated user
+
+Unusual
+These are some interesting ways other researchers were able to bypass the authentication
+
+### 1 ###
+
+Try looking for disabling the authentication mechanism by either supplying a false request to fool the server or using the request settings with PUT, POST method
+For reference: https://medium.com/stolabs/bypass-admin-authentication-on-seq-17f0f9e02732
+
+### 2 ###
+Response to Request manipulation: Alther the request depending upon the response of the particular request
+For reference: https://medium.com/infosec/how-i-was-able-to-uniquely-bypass-authentication-while-web-pentesting-cd5d8d6a2837
+
+### 3 ###
+Magic link: Analyze the resemblance of the login link provided by the server to your URL or try seeing if the received login link contains guessable values
+For reference: https://systemweakness.com/the-devil-is-in-the-details-authentication-bypass-a4704ea73ce3
+
+Intersting reads
+## https://infosecwriteups.com/bypass-authentication-1bfab09332fe --> improper Oauth implementation
+## 
+
