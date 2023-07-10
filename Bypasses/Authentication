@@ -23,7 +23,7 @@ Try looking for disabling the authentication mechanism by either supplying a fal
 For reference: https://medium.com/stolabs/bypass-admin-authentication-on-seq-17f0f9e02732
 
 ### 2 ###
-Response to Request manipulation: Alther the request depending upon the response of the particular request
+Response to Request manipulation: Alter the request depending upon the response of the particular request
 For reference: https://medium.com/infosec/how-i-was-able-to-uniquely-bypass-authentication-while-web-pentesting-cd5d8d6a2837
 
 ### 3 ###
