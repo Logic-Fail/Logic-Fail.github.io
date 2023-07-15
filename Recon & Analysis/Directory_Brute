@@ -1,6 +1,8 @@
-Can use any tools of choice, I generally use ffuf, dirsearch and Feroxbuster
+Can use any tools of choice, I generally use ffuf, dirsearch, and Feroxbuster
 
 Tips:
-#1 Use different wordlists depending upon the server, technology used.
-#2 Don't forget to add .zip, .php, etc extension at the end of the endpoint or file this might lead to the download of the whole source code of the server
+#1 Use different wordlists depending upon the server, and technology used.
+#2 Do use extensions and perform directory brute-force inside the found directory as well
+#2 Don't forget to add .zip, .php, etc extensions at the end of the endpoint or file this might lead to the download of the whole source code of the server
 #3 Never Forget to search for the username in the directory
+
