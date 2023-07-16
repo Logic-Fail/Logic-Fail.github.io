@@ -17,4 +17,9 @@ Microsoft 	SELECT @@version
 PostgreSQL 	SELECT version()
 MySQL 	SELECT @@version 
 
+Oracle 	--comment
+Microsoft 	--comment
+PostgreSQL 	--comment
+MySQL -- comment [Note the space after the double dash]
+
 For more: https://portswigger.net/web-security/sql-injection/cheat-sheet
