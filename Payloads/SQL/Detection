@@ -7,7 +7,7 @@ After determining if the website is vulnerable to SQL Injection, try to find the
 
 # order by command can come in use to determine that: If order by query gives an error on order by 6 and not on order by 5, it means the database has 5 columns.
 --> www.onlineshopping.com/products.php?pid=8 order by 1 -- //  
---> www.onlineshopping.com/products.php?usr=b' order by 3 -- // (If the parameter is a string then you need to add ' after it.)
+--> www.onlineshopping.com/products.php?usr=b' order by 3 -- // (If the parameter is a string then, need to add ' after it.)
 
 To preserve the space after -- add any character after that so that space doesn't get ignored in the HTTP request. Might also use #, /* */ for comments depending on the SQL database provider
 
