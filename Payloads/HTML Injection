@@ -1,2 +1,1 @@
-<a href="javascript:alert(document.domain);">XSS</a>
-<a href="javascript:alert('This is vulnerable to XSS');">XSS</a>
+<a href="https://google.com">Google</a>
