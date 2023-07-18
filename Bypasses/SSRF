@@ -1,0 +1,4 @@
+### SSRF ###
+--> Use 303 redirect to Bypass SSRF Protection
+  https://medium.com/techfenix/ssrf-server-side-request-forgery-worth-4913-my-highest-bounty-ever-7d733bb368cb --> Medium
+  https://hackerone.com/reports/247680 --> Hackerone report
