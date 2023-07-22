@@ -11,6 +11,6 @@ Techniques
 
 --> Do check HTTP-proxy history which will lead to some requests using IDs to get the attachments or files.
 
--->
+--> Do try to change the values with respect elements as they sometimes tend to bypass the authentication mechanism for eg: https://hackerone.com/reports/766437
 
 Note: Do view every endpoint as well as their request and response.
