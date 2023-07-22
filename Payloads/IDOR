@@ -1,5 +1,5 @@
 Well particularly there are no payloads for IDOR as it drastically depends upon the application but we will discuss some ways through which bug bounty hunters were able to discover IDOR, as a note to try 
-adding the parameters if there is a possibility of IDOR: -?id=, ?users=, /user, &id=, etc.
+adding the parameters if there is a possibility of IDOR: -?id=, ?users=, /user, &id=, &user_id, etc.
 
 Techniques
 --> In forget password if the application is sending a reset link to an email do check, if the reset link contains anything particular to the user like user id, username, and role. 
@@ -8,5 +8,9 @@ Techniques
 --> Try adding a user, or id at the end of the endpoints like IDOR to add secondary users in www.example.com/businessmanage/users/api/v1/users
 
 --> Try adding the media in an application to your favorites, save, or wishlist. Observe through the burp suite if it radiates any new endpoints which might lead to the discovery of hidden or private media.
+
+--> Do check HTTP-proxy history which will lead to some requests using IDs to get the attachments or files.
+
+-->
 
 Note: Do view every endpoint as well as their request and response.
