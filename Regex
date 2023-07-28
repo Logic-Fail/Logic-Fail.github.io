@@ -14,4 +14,4 @@ sqOatp-[0-9A-Za-z\-_]{22}|EAAA[a-zA-Z0-9]{60}	0	gf_square_access_token	High	Cert
 rk_live_[0-9a-zA-Z]{24}	0	gf_stripe_restricted_api	High	Certain
 [a-zA-Z0-9_-]*:[a-zA-Z0-9_\-]+@github\.com*	0	gf_github_access_token	High	Certain
 aws_access|aws_secret|api[_-]?key|ListBucketResult|S3_ACCESS_KEY|Authorization:|RSA PRIVATE|Index of|aws_|secret|"ssh-rsa AA"	0	gf_sec	High	Certain
-(?i)\b\w*id\b(?!\w)\s*=\s*("[^"]*"|'[^']*'|[^&\s}]*) IDOR High Certain
+(?i)\b\w*id\b(?!\w)\s*=\s*("[^"]*"|'[^']*'|[^&\s}]*)  IDOR  High  Certain
