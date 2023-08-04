@@ -1,5 +1,7 @@
 Below are some of the PoC for CORS extracted from Portswigger.
 
+Note: Origin is being sent automatically
+
 ### Case 1: CORS through Sub-domain (Needed to have XSS in one of the subdomains) ###
 
 <html>
